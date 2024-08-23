@@ -27,8 +27,8 @@ class TicketService:
         ticket.generated_gate = gate
 
         # Vehicle info..
-        vehicle = self.vehicleRepo.find_vehicle_by_id(vehicle_number)
-        if vehicle == None:
+        vehicle = self.vehicleRepo.find_vehicle_by_number(vehicle_number)
+        if vehicle is None:
             vehicle = Vehicle(id=vehicle_number, owner_name=owner_name, vehicle_type=vehicleType)
             vehicle = self.vehicleRepo.save_vehicle(vehicle)
         ticket.vehicle = vehicle

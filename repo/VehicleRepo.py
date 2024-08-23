@@ -11,5 +11,5 @@ class VehicleRepo:
         return None
 
     def save_vehicle(self, vehicle):
-        self.vehicleMap[vehicle.number] = vehicle
+        self.vehicleMap[vehicle.id] = vehicle
         return vehicle
