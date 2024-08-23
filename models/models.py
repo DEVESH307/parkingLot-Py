@@ -150,8 +150,7 @@ class Ticket(BaseModel):
 
 
 class Vehicle(BaseModel):
-    def __init__(self, id: int, vehicle_name: str, owner_name: str, vehicle_type: VehicleType):
+    def __init__(self, id: int, owner_name: str, vehicle_type: VehicleType):
         super().__init__(id)
-        self.vehicle_name = vehicle_name
         self.owner_name = owner_name
         self.vehicle_type = vehicle_type
