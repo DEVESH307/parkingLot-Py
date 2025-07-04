@@ -1,4 +1,4 @@
-class SlotRepo:
+class ParkingSlotRepo:
     def __init__(self):
         self.slots = {}
 
